@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RPG Anime Design System - Vibrant and energetic colors */
+
+@layer base {
+  :root {
+    /* Dark theme base for anime aesthetic */
+    --background: 230 25% 8%;
+    --foreground: 210 40% 98%;
+
+    /* RPG Card system */
+    --card: 230 20% 12%;
+    --card-foreground: 210 40% 95%;
+    --card-border: 200 100% 60%;
+
+    /* Magical popover */
+    --popover: 230 20% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Electric cyan primary */
+    --primary: 195 100% 60%;
+    --primary-foreground: 230 25% 8%;
+    --primary-glow: 195 100% 75%;
+
+    /* Mystical purple secondary */
+    --secondary: 270 80% 55%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-glow: 270 80% 70%;
+
+    /* Muted anime colors */
+    --muted: 230 15% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Golden accent for rewards */
+    --accent: 45 100% 60%;
+    --accent-foreground: 230 25% 8%;
+    --accent-glow: 45 100% 75%;
+
+    /* Energy colors */
+    --success: 120 100% 50%;
+    --success-foreground: 230 25% 8%;
+    --warning: 35 100% 55%;
+    --warning-foreground: 230 25% 8%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Interface elements */
+    --border: 230 20% 25%;
+    --input: 230 20% 15%;
+    --ring: 195 100% 60%;
+
+    /* XP and stats colors */
+    --xp-bar: 195 100% 60%;
+    --health: 0 85% 60%;
+    --mana: 240 100% 65%;
+    --stamina: 120 100% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 60%), hsl(270 80% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 80% 55%), hsl(320 80% 60%));
+    --gradient-reward: linear-gradient(135deg, hsl(45 100% 60%), hsl(35 100% 55%));
+    --gradient-card: linear-gradient(135deg, hsl(230 20% 12%), hsl(230 25% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 60%) 0%, hsl(270 80% 55%) 50%, hsl(320 80% 60%) 100%);
+    --gradient-rpg: linear-gradient(135deg, hsl(230 25% 8%) 0%, hsl(230 20% 12%) 50%, hsl(230 25% 8%) 100%);
+
+    /* Shadows and glows */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 8px 32px hsl(230 25% 4% / 0.8);
+    --shadow-primary: 0 4px 20px hsl(var(--primary) / 0.4);
+    --shadow-accent: 0 4px 20px hsl(var(--accent) / 0.4);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode keeps the same anime aesthetic but lighter */
+  .light {
+    --background: 210 30% 95%;
+    --foreground: 230 25% 8%;
+    --card: 210 30% 98%;
+    --card-foreground: 230 25% 12%;
+    --muted: 210 20% 88%;
+    --muted-foreground: 230 15% 35%;
+    --border: 210 20% 85%;
+    --input: 210 20% 90%;
+    --shadow-card: 0 8px 32px hsl(230 25% 60% / 0.15);
+  }
+
+  /* Anime-style utility classes */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    border: 2px solid transparent;
+    background: var(--gradient-primary) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  .card-rpg {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--card-border) / 0.3);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
